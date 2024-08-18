@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script>
+//question  # 1
+var character = prompt("Enter a character:");
+var ascii = character.charCodeAt(0);
+
+if (ascii >= 48 && ascii <= 57) {
+    alert("The character is a number.");
+} else if (ascii >= 65 && ascii <= 90) {
+    alert("The character is an uppercase letter.");
+} else if (ascii >= 97 && ascii <= 122) {
+    alert("The character is a lowercase letter.");
+} else {
+    alert("The character is not a number or letter.");
+}
+//question # 2
+var  num1 = parseInt(prompt("Enter the first integer:"));
+var  num2 = parseInt(prompt("Enter the second integer:"));
+
+if (num1 > num2) {
+    alert("The larger number is: " + num1);
+} else if (num2 > num1) {
+    alert("The larger number is: " + num2);
+} else {
+    alert("Both numbers are equal.");
+}
+//question # 3
+var  number = parseFloat(prompt("Enter a number:"));
+
+if (number > 0) {
+    alert("The number is positive.");
+} else if (number < 0) {
+    alert("The number is negative.");
+} else {
+    alert("The number is zero.");
+}
+//question # 4
+var  char = prompt("Enter a single character:").toLowerCase();
+var  isVowel = "aeiou".includes(char);
+
+alert(isVowel ? "True, it is a vowel." : "False, it is not a vowel.");
+//question # 5
+var  correctPassword = "yourpassword";
+var  userPassword = prompt("Enter your password:");
+
+if (!userPassword) {
+    alert("Please enter your password.");
+} else if (userPassword === correctPassword) {
+    alert("Correct! The password you entered matches the original password.");
+} else {
+    alert("Incorrect password.");
+}
+//question # 6
+var  greeting;
+var hour = 13;
+
+if (hour < 18) {
+    greeting = "Good day";
+} else {
+    greeting = "Good evening";
+}
+
+alert(greeting);
+//question # 7
+var  time = parseInt(prompt("Enter time in 24-hour format (e.g., 1900 for 7 PM):"));
+
+if (time >= 0 && time < 1200) {
+    alert("Good morning!");
+} else if (time >= 1200 && time < 1700) {
+    alert("Good afternoon!");
+} else if (time >= 1700 && time < 2100) {
+    alert("Good evening!");
+} else if (time >= 2100 && time <= 2359) {
+    alert("Good night!");
+} else {
+    alert("Invalid time format.");
+}
+</script>
+</body>
+
+</html>
